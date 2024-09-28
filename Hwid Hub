@@ -3,7 +3,7 @@ getgenv().gethui = function()
 end
 -- above is SYNAPSE Z SUPPORT
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "HWID HUB V1.7", HidePremium = false, IntroText = "HWID 1.7 UPDATE", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "HWID HUB V1.75", HidePremium = false, IntroText = "HWID 1.75 UPDATE", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 -- Tabs
 local Tab = Window:MakeTab({
@@ -14,6 +14,12 @@ local Tab = Window:MakeTab({
 
 local HWTab = Window:MakeTab({
     Name = "|Hubs|",
+    Icon = "rbxassetid://",
+    PremiumOnly = false
+})
+
+local OTab = Window:MakeTab({
+    Name = "|Other Hubs By Me|",
     Icon = "rbxassetid://",
     PremiumOnly = false
 })
@@ -29,7 +35,11 @@ local function namelessAdmin()
     getgenv().NamelessLoaded=false -- use this if nameless admin didn't load
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))();
 end
- 
+
+local function HwidHubExtension()
+    loadstring(game.HttpGet("https://raw.githubusercontent.com/Barrelton/Hwid-Hub/d7a6cf9391c019fe53a41d8ee55293fbd4c8d7e8/Bedwarz"))()
+ end
+
 local function GEFscript()
     loadstring(game:HttpGet("https://pastebin.com/raw/eLUVkGvE"))()
 end
@@ -264,7 +274,13 @@ KEYTab:AddButton({
         FFJ2()
     end
 })
-    
+
+OTab:AddButton({
+    Name = "Hwid Extension Bedwarz ( WILL UNLOAD HWID HUB )",
+    Callback = function()
+        HwidHubExtension()
+    end
+})
 
 
 

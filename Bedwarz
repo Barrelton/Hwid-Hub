@@ -1,0 +1,154 @@
+print("Made by Barrelton also known as HWID")
+print("This is just a small extension for some garbage game")
+print("The kill aura just auto swings the sword so it's shitty")
+
+-- Syn z support
+getgenv().gethui = function()
+    return game:GetService("CoreGui")
+end
+-- Library
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "HWID EXTENSION |BEDWARZ|", HidePremium = false, IntroText = "HWID EXTENSION", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+    Name = "|Auras|", 
+    Icon = "rbxassetid://", -- rbxassetid://4483345998
+    PremiumOnly = false
+})
+
+local HWTab = Window:MakeTab({
+    Name = "|Universal|",
+    Icon = "rbxassetid://",
+    PremiumOnly = false
+})
+
+-- Functions
+local function WoodSword()
+    while true do
+    wait(0.001)
+    local args = {
+        [1] = Vector3.new(0.6844841241836548, -0.010000737383961678, 0.7290277481079102),
+       [2] = "Wooden Sword"
+    }
+
+    game:FindService("ReplicatedStorage").Remotes.SwordAttack:InvokeServer(unpack(args))
+    end
+end
+
+local function StoneSword()
+    while true do
+        wait(0.001)
+            local args = {
+       [1] = Vector3.new(-0.9545551538467407, -0.33639809489250183, 0.29803428053855896),
+         [2] = "Stone Sword"
+         }
+
+          game:FindService("ReplicatedStorage").Remotes.SwordAttack:InvokeServer(unpack(args))
+    end
+end
+
+local function IronSword()
+while true do
+    wait(0.001)
+        local args = {
+    [1] = Vector3.new(-0.6718324422836304, -0.657770574092865, 0.7407031655311584),
+    [2] = "Iron Sword"
+    }
+
+    game:FindService("ReplicatedStorage").Remotes.SwordAttack:InvokeServer(unpack(args))
+    end
+end
+
+local function DiamondSword()
+while true do
+    wait(0.001)
+        local args = {
+    [1] = Vector3.new(0.08482760936021805, -0.3507743179798126, 0.9963956475257874),
+    [2] = "Diamond Sword"
+    }
+
+    game:FindService("ReplicatedStorage").Remotes.SwordAttack:InvokeServer(unpack(args))
+    end
+end
+
+local function EmeraldSword()
+while true do
+    wait(0.001)
+        local args = {
+    [1] = Vector3.new(-0.17469574511051178, 0.013006174936890602, 0.9846224784851074),
+    [2] = "Emerald Sword"
+    }
+
+    game:FindService("ReplicatedStorage").Remotes.SwordAttack:InvokeServer(unpack(args))
+    end
+end
+
+local function ESP()
+loadstring(game.HttpGet("https://pastebin.com/raw/iW6vjpPe"))()
+end
+
+local function NamelessAdmin()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))();
+end
+
+-- Buttons
+Tab:AddButton({
+    Name = "Kill aura WOODEN SWORD",
+    Callback = function()
+         WoodSword()
+    end
+})
+
+Tab:AddButton({
+    Name = "Kill aura STONE SWORD",
+    Callback = function()
+        StoneSword()
+    end
+})
+
+Tab:AddButton({
+    Name = "Kill aura IRON SWORD",
+    Callback = function()
+        IronSword()
+    end
+})
+
+Tab:AddButton({
+    Name = "Kill aura DIAMOND SWORD",
+    Callback = function()
+        DiamondSword()
+    end
+})
+
+Tab:AddButton({
+    Name = "Kill aura EMERALD SWORD",
+    Callback = function()
+        EmeraldSword()
+    end
+})
+
+HWTab:AddButton({
+    Name = "Nameless Admin",
+    Callback = function()
+        NamelessAdmin()
+    end
+})
+
+-- Finalization so the script actually loads
+OrionLib:Init()
+wait(2)
+print("                                                        ")
+print("1      1     1       1       1     1 1 1 1 1       1 1 1")
+print("1      1      1     1 1     1          1           1    1")
+print("1 1  1 1       1   1   1   1           1           1     1")
+print("1      1        1 1     1 1            1           1    1")
+print("1      1         1       1         1 1 1 1 1       1 1 1")
+print("                                                        ")
+print("=====================================================")
+print("                                                      ")
+print("1      1      1    1       1 1   ")
+print("1      1      1    1       1   1 ")
+print("1 1  1 1      1    1       1 1   ")
+print("1      1      1    1       1   1 ")
+print("1      1       1111        1 1   ")
+print("                                 ")

@@ -1,18 +1,23 @@
 print("Made by Barrelton also known as HWID")
 print("This is just a small extension for some garbage game")
-print("The kill aura just auto swings the sword so it's shitty")
+print("The kill aura's got patched ripped")
 
--- Syn z support
 getgenv().gethui = function()
     return game:GetService("CoreGui")
 end
 -- Library
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "HWID EXTENSION |BEDWARZ|", HidePremium = false, IntroText = "HWID EXTENSION", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "HWID EXTENSION V1.5 |BEDWARZ|", HidePremium = false, IntroText = "HWID EXTENSION |BEDWARZ| V1.5", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
-    Name = "|Auras|", 
+    Name = "|Auto buys + others|", 
     Icon = "rbxassetid://", -- rbxassetid://4483345998
+    PremiumOnly = false
+})
+
+local ENTab = Window:MakeTab({
+    Name = "|Auto Upgrade|",
+    Icon = "rbxassetid://",
     PremiumOnly = false
 })
 
@@ -23,63 +28,148 @@ local HWTab = Window:MakeTab({
 })
 
 -- Functions
-local function WoodSword()
-    while true do
-    wait(0.001)
-    local args = {
-        [1] = Vector3.new(0.6844841241836548, -0.010000737383961678, 0.7290277481079102),
-       [2] = "Wooden Sword"
-    }
+local function JoinGame()
+local args = {
+    [1] = "Join"
+}
 
-    game:FindService("ReplicatedStorage").Remotes.SwordAttack:InvokeServer(unpack(args))
-    end
+game:FindService("ReplicatedStorage").Remotes.PlayerStartGame:InvokeServer(unpack(args))
 end
 
 local function StoneSword()
     while true do
-        wait(0.001)
-            local args = {
-       [1] = Vector3.new(-0.9545551538467407, -0.33639809489250183, 0.29803428053855896),
-         [2] = "Stone Sword"
-         }
+        wait(0.1)
+local args = {
+    [1] = "Stone Sword"
+}
 
-          game:FindService("ReplicatedStorage").Remotes.SwordAttack:InvokeServer(unpack(args))
+game:FindService("ReplicatedStorage").Remotes.PurchaseItem:InvokeServer(unpack(args))
+
     end
 end
 
+local function Bow()
+    while true do 
+        wait(0.1)
+        local args = {
+    [1] = "Bow"
+}
+
+game:FindService("ReplicatedStorage").Remotes.PurchaseItem:InvokeServer(unpack(args))
+    end
+end
+
+
 local function IronSword()
 while true do
-    wait(0.001)
-        local args = {
-    [1] = Vector3.new(-0.6718324422836304, -0.657770574092865, 0.7407031655311584),
-    [2] = "Iron Sword"
-    }
+    wait(0.1)
+local args = {
+    [1] = "Iron Sword"
+}
 
-    game:FindService("ReplicatedStorage").Remotes.SwordAttack:InvokeServer(unpack(args))
+game:FindService("ReplicatedStorage").Remotes.PurchaseItem:InvokeServer(unpack(args))
+
     end
 end
 
 local function DiamondSword()
 while true do
-    wait(0.001)
-        local args = {
-    [1] = Vector3.new(0.08482760936021805, -0.3507743179798126, 0.9963956475257874),
-    [2] = "Diamond Sword"
-    }
+    wait(0.1)
+local args = {
+    [1] = "Diamond Sword"
+}
 
-    game:FindService("ReplicatedStorage").Remotes.SwordAttack:InvokeServer(unpack(args))
+game:FindService("ReplicatedStorage").Remotes.PurchaseItem:InvokeServer(unpack(args))
+
     end
 end
 
 local function EmeraldSword()
 while true do
-    wait(0.001)
+    wait(0.1)
+local args = {
+    [1] = "Emerald Sword"
+}
+
+game:FindService("ReplicatedStorage").Remotes.PurchaseItem:InvokeServer(unpack(args))
+
+    end
+end
+
+local function LeatherArmor()
+while true do
+wait(0.1)
+    local args = {
+    [1] = "Leather Armor"
+}
+
+game:FindService("ReplicatedStorage").Remotes.PurchaseItem:InvokeServer(unpack(args))
+    end
+end
+
+local function IronArmor()
+while true do
+wait(0.1)
+local args = {
+    [1] = "Iron Armor"
+}
+
+game:FindService("ReplicatedStorage").Remotes.PurchaseItem:InvokeServer(unpack(args))
+    end
+end
+
+local function DiamondArmor()
+    while true do
+        wait(0.1)
         local args = {
-    [1] = Vector3.new(-0.17469574511051178, 0.013006174936890602, 0.9846224784851074),
-    [2] = "Emerald Sword"
+      [1] = "Diamond Armor"
     }
 
-    game:FindService("ReplicatedStorage").Remotes.SwordAttack:InvokeServer(unpack(args))
+    game:FindService("ReplicatedStorage").Remotes.PurchaseItem:InvokeServer(unpack(args))
+    end
+end
+
+local function EmeraldArmor()
+    while true do
+        wait(0.1)
+        local args = {
+    [1] = "Emerald Armor"
+}
+
+game:FindService("ReplicatedStorage").Remotes.PurchaseItem:InvokeServer(unpack(args))
+    end
+end
+
+local function GenSpeed()
+        while true do
+        wait(0.1)
+    local args = {
+    [1] = "Generator Speed"
+}
+
+game:FindService("ReplicatedStorage").Remotes.TeamUpgrade:InvokeServer(unpack(args))
+    end
+end
+
+local function DiamondGen()
+while true do
+wait(0.1)
+    local args = {
+    [1] = "Diamond Generator"
+}
+
+game:FindService("ReplicatedStorage").Remotes.TeamUpgrade:InvokeServer(unpack(args))
+    end
+end
+
+local function EmeraldGen()
+while true do
+wait(0.1)
+    local args = {
+    [1] = "Emerald Generator"
+}
+
+game:FindService("ReplicatedStorage").Remotes.TeamUpgrade:InvokeServer(unpack(args))
     end
 end
 
@@ -91,39 +181,99 @@ local function NamelessAdmin()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))();
 end
 
+local function HwidHub()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Barrelton/Hwid-Hub/refs/heads/main/Hwid%20Hub"))()
+end
+
 -- Buttons
 Tab:AddButton({
-    Name = "Kill aura WOODEN SWORD",
+    Name = "Revive yourself (BUGGY! BEDS HAVE TO EXIST)",
     Callback = function()
-         WoodSword()
+         JoinGame()
     end
 })
 
 Tab:AddButton({
-    Name = "Kill aura STONE SWORD",
+    Name = "Auto Buy STONE SWORD",
     Callback = function()
         StoneSword()
     end
 })
 
 Tab:AddButton({
-    Name = "Kill aura IRON SWORD",
+    Name = "Auto Buy IRON SWORD",
     Callback = function()
         IronSword()
     end
 })
 
 Tab:AddButton({
-    Name = "Kill aura DIAMOND SWORD",
+    Name = "Auto Buy DIAMOND SWORD",
     Callback = function()
         DiamondSword()
     end
 })
 
 Tab:AddButton({
-    Name = "Kill aura EMERALD SWORD",
+    Name = "Auto Buy EMERALD SWORD",
     Callback = function()
         EmeraldSword()
+    end
+})
+
+Tab:AddButton({
+    Name = "Auto Buy Bow",
+    Callback = function()
+        Bow()
+    end
+})
+
+Tab:AddButton({
+    Name = "Auto Buy Leather Armor",
+    Callback = function()
+        LeatherArmor()
+    end
+})
+
+Tab:AddButton({
+    Name = "Auto Buy Iron Armor",
+    Callback = function()
+        IronArmor()
+    end
+})
+
+Tab:AddButton({
+    Name = "Auto Buy Diamond Armor",
+    Callback = function()
+        DiamondArmor()
+    end
+})
+
+Tab:AddButton({
+    Name = "Auto Buy Emerald Armor",
+    Callback = function()
+        EmeraldArmor()
+    end
+})
+
+ENTab:AddButton({
+    Name = "Auto Upgrade Generator Speed",
+    Callback = function()
+        GenSpeed()
+    end
+})
+
+ENTab:AddButton({
+    Name = "Auto Upgrade Diamond Generator",
+    Callback = function()
+        DiamondGen()
+    end
+})
+
+ENTab:AddButton({
+    Name = "Auto Upgrade Emerald Generator",
+    Callback = function()
+        EmeraldGen()
     end
 })
 
@@ -134,9 +284,16 @@ HWTab:AddButton({
     end
 })
 
+HWTab:AddButton({
+    Name = "Reload Hwid Hub",
+    Callback = function()
+        HwidHub()
+    end
+})
+
 -- Finalization so the script actually loads
 OrionLib:Init()
-wait(2)
+wait(0.1)
 print("                                                        ")
 print("1      1     1       1       1     1 1 1 1 1       1 1 1")
 print("1      1      1     1 1     1          1           1    1")

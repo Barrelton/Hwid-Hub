@@ -37,7 +37,7 @@ local function namelessAdmin()
 end
 
 local function HwidHubExtension()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Barrelton/BEDWARZ-NOT-BEDWARS/refs/heads/main/Hwid%20Hub%20Extension%20BEDWARZ?token=GHSAT0AAAAAACX2Y4AD2TXZ2HAPGZVED2BCZX66SJA"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Barrelton/Hwid-Hub/refs/heads/main/Bedwarz"))()
  end
 
 local function GEFscript()

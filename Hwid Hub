@@ -1,9 +1,9 @@
 getgenv().gethui = function()
     return game:GetService("CoreGui")
 end
--- above is SYNAPSE Z SUPPORT
+-- above is old syn z support (kept incase other executors need it)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "HWID HUB V1.77", HidePremium = false, IntroText = "HWID 1.77 UPDATE", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "HWID HUB V1.78", HidePremium = false, IntroText = "HWID 1.78 UPDATE", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 -- Tabs
 local Tab = Window:MakeTab({
@@ -143,6 +143,10 @@ local function Notepad()
     )
 end
 
+local function UltimateTest()
+	loadstring(game:HttpGet("https://pastebin.com/SE76LcRy"))()
+end
+
 
 -- Buttons
 Tab:AddButton({
@@ -160,6 +164,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+	Name = "Ultimate Collection Of Tests",
+	Callback = function()
+		UltimateTest()
+	end
+})
+
+Tab:AddButton({
     Name = "RCE Vuln checker",
     Callback = function()
         RCE()
@@ -167,7 +178,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "SUNC - shows REAL unc of execs",
+    Name = "SUNC - shows estimated real (or the real unc) unc of execs",
     Callback = function()
         SUNC()
     end

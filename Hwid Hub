@@ -3,7 +3,7 @@ getgenv().gethui = function()
 end
 -- above is old syn z support (kept incase other executors need it)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "HWID HUB V1.78", HidePremium = false, IntroText = "HWID 1.78 UPDATE", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "HWID HUB V1.78", HidePremium = false, IntroText = "HWID HUB 1.78 (LEGACY)", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 -- Tabs
 local Tab = Window:MakeTab({

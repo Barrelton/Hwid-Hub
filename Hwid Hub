@@ -337,7 +337,8 @@ OTab:AddButton({
 
 -- Finalization so the script actually loads
 OrionLib:Init()
-wait(2)
+print("Fully initalized!")
+wait(1.5)
 print("1      1     1       1       1     1 1 1 1 1       1 1 1")
 print("1      1      1     1 1     1          1           1    1")
 print("1 1  1 1       1   1   1   1           1           1     1")

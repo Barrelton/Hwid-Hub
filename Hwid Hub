@@ -25,7 +25,7 @@ local OTab = Window:MakeTab({
 })
 
 local KEYTab = Window:MakeTab({
-    Name = "|Key Scripts/Hubs|",
+    Name = "|Keyed Scripts|",
     Icon = "rbxassetid://",
     PremiumOnly = false
 })
